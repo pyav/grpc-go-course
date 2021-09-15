@@ -14,6 +14,7 @@ protoc greet/greetpb/greet.proto --go_out=plugins=grpc:.
 # Unary RPC
 ## Output of server run
 Greet Server!
+
 Greet function was invoked with greeting:{first_name:"Anand" last_name:"Verma"}
 
 ## Output of client run
