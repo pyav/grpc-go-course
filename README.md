@@ -18,6 +18,8 @@ Greet function was invoked with greeting:{first_name:"Anand" last_name:"Verma"}
 
 ## Output of client run
 Hello..I am a client!
+
 Starting to do a unary RPC...
+
 2021/09/15 20:38:49 Response from Greet service: Hello Anand
 
