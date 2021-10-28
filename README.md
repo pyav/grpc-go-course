@@ -1,5 +1,5 @@
 # grpc-go-course
-This repository is meant for keep the notes and codes for gRPC tutorial in GoLang from Udemy.
+This repository is meant for keeping the notes and codes for gRPC tutorial in GoLang from Udemy.
 
 ## Setup
 go get -u github.com/golang/protobuf/protoc-gen-go  
