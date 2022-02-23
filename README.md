@@ -10,6 +10,9 @@ brew install protobuf
 ## Command to compile proto file
 protoc greet/greetpb/greet.proto --go_out=plugins=grpc:.  
 
+## Command to set GO111MODULE to auto
+go env -w GO111MODULE=auto
+
 # Unary RPC
 ## Output of server run
 Greet Server!  
@@ -26,3 +29,25 @@ Sum function was invoked with first_num:3  second_num:10
 Calculator client  
 Starting to do a Sum unary RPC...  
 2021/09/15 22:41:10 Response from calculator service: 13  
+
+# Server Streaming
+## Output of server run
+go run greet/greet_server/server.go
+Greet Server!
+GreetManyTimes function was invoked with greeting:{first_name:"Anand"  last_name:"Verma"}
+
+## Output of client run
+go run greet/greet_client/client.go
+Hello..I am a client!
+Starting to do a Server streaming RPC...
+2022/02/23 11:11:29 Response from GreetManyTimes: HelloAnand number 0
+2022/02/23 11:11:30 Response from GreetManyTimes: HelloAnand number 1
+2022/02/23 11:11:31 Response from GreetManyTimes: HelloAnand number 2
+2022/02/23 11:11:32 Response from GreetManyTimes: HelloAnand number 3
+2022/02/23 11:11:33 Response from GreetManyTimes: HelloAnand number 4
+2022/02/23 11:11:34 Response from GreetManyTimes: HelloAnand number 5
+2022/02/23 11:11:35 Response from GreetManyTimes: HelloAnand number 6
+2022/02/23 11:11:36 Response from GreetManyTimes: HelloAnand number 7
+2022/02/23 11:11:37 Response from GreetManyTimes: HelloAnand number 8
+2022/02/23 11:11:38 Response from GreetManyTimes: HelloAnand number 9
+
